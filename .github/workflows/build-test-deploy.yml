@@ -39,15 +39,15 @@ jobs:
 
     permissions:
       contents: write
-      pages: write
-      id-token: write
+      pages: write     
+      id-token: write  
 
-    environment: 
+    environment:
       name: production
       url: ${{ steps.deployment.outputs.page_url }}
-
+    
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: checkout repo
         uses: actions/checkout@v4
